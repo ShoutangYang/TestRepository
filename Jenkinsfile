@@ -1,3 +1,5 @@
+def viPath = "AddTest.vi"
+
 
 node 
 
