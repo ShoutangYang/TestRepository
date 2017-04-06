@@ -9,7 +9,7 @@ def call(viName) {
 
         echo vi_run_json       
 
-        def vi_run_response = httpRequest "http://localhost:8002/LabVIEWCIService/RUN_VI?JSON="+java.net.URLEncoder.encode(vi_run_json, "UTF-8").replaceAll("\\+", "%20")
+        def vi_run_response = httpRequest "http://localhost:8002/LabVIEWCIService/Run_VI?JSON="+java.net.URLEncoder.encode(vi_run_json, "UTF-8").replaceAll("\\+", "%20")
 
         println("Status: "+ vi_run_response.status)
 
