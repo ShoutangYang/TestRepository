@@ -1,5 +1,9 @@
 
 node 
+stages
 {
-echo "Hello World!"
+ stage ('Pre-Clean')
+  {
+  echo "Hello World!"
+  }
 }
