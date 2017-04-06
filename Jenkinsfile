@@ -1,6 +1,6 @@
 
 node 
-stages
+
 {
  stage ('Pre-Clean')
   {
