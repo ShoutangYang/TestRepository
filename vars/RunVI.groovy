@@ -5,15 +5,15 @@ def call(viName) {
 
         echo 'Running VI '+ viName
 
-        def vi_run_json = JsonOutput.toJson(['VI Name': "${vipName}"])//"LabVIEW Version":"${lvVersion}"])
+        def vi_run_json = JsonOutput.toJson(['VI Name': "${viName}"])//"LabVIEW Version":"${lvVersion}"])
 
         echo vi_run_json       
 
-        def vip_run_response = httpRequest "http://localhost:8002/LabVIEWCIService/VIP_INSTALL?JSON="+java.net.URLEncoder.encode(vi_run_json, "UTF-8").replaceAll("\\+", "%20")
+        def vi_run_response = httpRequest "http://localhost:8002/LabVIEWCIService/RUN_VI?JSON="+java.net.URLEncoder.encode(vi_run_json, "UTF-8").replaceAll("\\+", "%20")
 
-        println("Status: "+ vip_run_response.status)
+        println("Status: "+ vi_run_response.status)
 
-        println("Content: "+vip_run_response.content)       
+        println("Content: "+vi_run_response.content)       
 
         echo 'Magic wait of 5 seconds...'
 
