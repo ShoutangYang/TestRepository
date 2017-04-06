@@ -6,7 +6,7 @@ node
   {
   //echo "Hello World!"
   // stage ('UTF'){
-        RunVI(utfPath)    
+        RunVI(viPath)    
       }
   
   }
