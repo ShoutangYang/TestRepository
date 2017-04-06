@@ -4,6 +4,10 @@ node
 {
  stage ('Pre-Clean')
   {
-  echo "Hello World!"
+  //echo "Hello World!"
+  // stage ('UTF'){
+        RunVI(utfPath)    
+      }
+  
   }
 }
