@@ -10,7 +10,7 @@ node
       {
         bat 'mkdir build_temp'
       }
-    stage ('Run VI'
+    stage ('Run VI')
       {
        RunVI(viPath)
       }
