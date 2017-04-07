@@ -1,6 +1,8 @@
   
   #!/usr/bin/env groovy
 //Leave the above line alone.  It identifies this as a groovy script.
+call(viPath)
+{
 node
   stage ('Temp Directories')
   {
@@ -10,3 +12,4 @@ stage ('Run VI'
 {
 RunVI(viPath)
 }
+       }
