@@ -6,6 +6,10 @@ def call(viPath)
 {
 node
   {
+    stage('PreClean')
+      {
+      preClean()
+      }
     stage ('Temp Directories')
       {
        // bat 'mkdir build_temp'
@@ -14,5 +18,9 @@ node
       {
        RunVI(viPath)
       }
-   }
+     stage('PostClean')
+      {
+      postClean()
+      }
+  }
 }
