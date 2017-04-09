@@ -12,7 +12,7 @@ node
       }
     stage ('Temp Directories')
       {
-       bat 'mkdir build_temp'
+     //  bat 'mkdir build_temp'
       }
     stage ('Run VI')
       {
