@@ -1,6 +1,6 @@
 #!/usr/bin/env groovy
 
-def viPath = "source\\AddTest.vi"
+def viPath = "source\\add-test.vi"
 
 testcaller(viPath)
 
