@@ -10,6 +10,10 @@ node
       {
       preClean()
       }
+    stage ('SCM_Checkout'){
+        echo 'Attempting to get source from repo...'
+        checkout scm
+      }
     stage ('Temp Directories')
       {
       bat 'mkdir build_temp'
