@@ -6,7 +6,7 @@ def call(path) {
        // echo 'Running VI '+ viName
 
         //def vi_run_json = JsonOutput.toJson(['VI Name': "${viName}"])//"LabVIEW Version":"${lvVersion}"])
-        def vi_run_json = JsonOutput.toJson([Executor_Number: env.EXECUTOR_NUMBER.toString(),'VI_Path': env.WORKSPACE+"\\"path, 'Wait_Until_Done': "false".toBoolean()])
+        def vi_run_json = JsonOutput.toJson([Executor_Number: env.EXECUTOR_NUMBER.toString(),'VI_Path': env.WORKSPACE+"\\"+path, 'Wait_Until_Done': "false".toBoolean()])
         //"${WORKSPACE}\\${path}"
        echo vi_run_json       
 
