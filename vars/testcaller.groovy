@@ -2,7 +2,7 @@
 //Leave the above line alone.  It identifies this as a groovy script.
 
 
-def call(viPath)
+def call(viPath,projPath)
 {
 node
   {
@@ -20,7 +20,11 @@ node
       }
     stage ('Run VI')
       {
-       RunVI(viPath)
+     //  RunVI(viPath)
+      }
+    stage ('LabVIEW Build')
+      {
+      testbuilder(projPath)
       }
      stage('PostClean')
       {
