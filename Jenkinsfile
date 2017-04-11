@@ -3,6 +3,6 @@
 def viPath = "source\\add-test.vi"
 def projPath = "source\\test-proj.lvproj"
 
-testcaller(viPath)
-testBuilder(projPath)
+testcaller(viPath, projPath)
+
 
