@@ -24,7 +24,7 @@ node
       }
     stage ('LabVIEW Build')
       {
-      testbuilder(projPath)
+      call(projPath, buildTarget, buildSpec)
       }
      stage('PostClean')
       {
