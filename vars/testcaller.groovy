@@ -1,8 +1,8 @@
 #!/usr/bin/env groovy
 //Leave the above line alone.  It identifies this as a groovy script.
+//Call from Jenkinsfile is testcaller(viPath, projPath, buildTarget, buildSpec)
 
-
-def call(viPath,projPath)
+def call(viPath, projPath, buildTarget, buildSpec)
 {
 node
   {
