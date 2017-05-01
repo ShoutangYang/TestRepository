@@ -20,7 +20,7 @@ node
       }
     stage ('Run VI')
       {
-     //  RunVI(viPath)
+       RunVI(viPath)
       }
     stage ('LabVIEW Build')
       {
