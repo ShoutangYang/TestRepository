@@ -11,7 +11,7 @@ def call(projPath, buildTarget, buildSpec)
         echo build_json
       //  Executor_Number, Workspace_Path, Build_Spec, Target, Project_Path, Auto_Version_Increment - boolean, env.EXECUTOR_NUMBER.toString()
         
-        //def build_response = httpRequest "http://localhost:8002/LabVIEWCIService/LabVIEW_Build?JSON="+java.net.URLEncoder.encode(build_json, "UTF-8").replaceAll("\\+", "%20")
+        def build_response = httpRequest "http://localhost:8002/LabVIEWCIService/LabVIEW_Build?JSON="+java.net.URLEncoder.encode(build_json, "UTF-8").replaceAll("\\+", "%20")
       //  println("Status: "+build_response.status)
        // println("Content: "+build_response.content)
         
