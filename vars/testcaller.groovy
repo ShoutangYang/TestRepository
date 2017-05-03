@@ -20,11 +20,11 @@ node
       }
     stage ('Run VI')
       {
-       RunVI(viPath)
+       runVI(viPath)
       }
     stage ('LabVIEW Build')
       {
-      testbuilder(projPath, buildTarget, buildSpec)
+      buildSpec(projPath, buildTarget, buildSpec)
       }
      stage('PostClean')
       {
