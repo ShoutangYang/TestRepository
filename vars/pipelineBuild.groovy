@@ -25,7 +25,7 @@ node
       }
     stage ('LabVIEW Build')
       {
-        echo 'Attempting to build' + {$buildSpec} + ' with the target' + {$buildTarget}
+        echo 'Attempting to build the specification requested'
       buildSpec(projPath, buildTarget, buildSpec)
       }
      stage('PostClean')
