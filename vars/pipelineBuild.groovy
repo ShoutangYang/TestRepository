@@ -20,10 +20,12 @@ node
       }
     stage ('Run VI')
       {
-       runVI(viPath)
+       echo 'Attempting to build the VI specified'
+        runVI(viPath)
       }
     stage ('LabVIEW Build')
       {
+        echo 'Attempting to build' + {$buildSpec} + ' with the target' + {$buildTarget}
       buildSpec(projPath, buildTarget, buildSpec)
       }
      stage('PostClean')
