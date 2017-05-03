@@ -26,7 +26,7 @@ node
     stage ('LabVIEW Build')
       {
         echo 'Attempting to build the specification requested'
-      buildSpec(projPath, buildTarget, buildSpec)
+      build_Spec(projPath, buildTarget, buildSpec)
       }
      stage('PostClean')
       {
