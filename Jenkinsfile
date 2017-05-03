@@ -5,6 +5,6 @@ def projPath = "source\\add-proj.lvproj"
 def buildTarget = "My Computer"
 def buildSpec = "exe"
 
-testcaller(viPath, projPath, buildTarget, buildSpec)
+pipelineBuild(viPath, projPath, buildTarget, buildSpec)
 
 
