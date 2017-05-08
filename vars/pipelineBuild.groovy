@@ -11,8 +11,8 @@ node
        preClean()
       }
     stage ('SCM_Checkout'){
-        echo 'Attempting to get source from repo...'
-        checkout scm
+       echo 'Attempting to get source from repo...'
+       checkout scm
       }
     stage ('Temp Directories')
       {
@@ -21,12 +21,12 @@ node
     stage ('Run VI')
       {
        echo 'Attempting to run the VI specified'
-        runVI(viPath)
+       runVI(viPath)
       }
     stage ('LabVIEW Build')
       {
-        echo 'Attempting to build the specification requested'
-      LV_Build(projPath, buildTarget, buildSpec)
+       echo 'Attempting to build the specification requested'
+       LV_Build(projPath, buildTarget, buildSpec)
       }
      stage('PostClean')
       {
