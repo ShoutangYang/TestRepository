@@ -18,15 +18,15 @@ node
       {
       bat 'mkdir build_temp'
       }
-    stage ('Run VI')
-      {
-       echo 'Attempting to run the VI specified'
-       runVI(viPath)
-      }
+   // stage ('Run VI')
+   //   {
+   //    echo 'Attempting to run the VI specified'
+   //    runVI(viPath)
+   //   }
     stage ('LabVIEW Build')
       {
        echo 'Attempting to build the specification requested'
-       LV_Build(projPath, buildTarget, buildSpec)
+       LV_Build(projPath, buildTarget, buildSpec, 2016)
       }
      stage('PostClean')
       {
