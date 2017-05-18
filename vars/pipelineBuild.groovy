@@ -26,7 +26,7 @@ node
     stage ('LabVIEW Build')
       {
        echo 'Attempting to build the specification requested'
-       LvBuild(projPath, buildTarget, buildSpec, "2016")
+       lvBuild(projPath, buildTarget, buildSpec, "2016")
       }
      stage('PostClean')
       {
